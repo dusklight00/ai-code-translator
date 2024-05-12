@@ -21,8 +21,10 @@ function App() {
         <Flex>
           <Spacer />
           <VStack gap="30px">
-            <Heading>AI Code Translator</Heading>
-            <Button colorScheme="blue">Translate</Button>
+            <Heading size="4xl">AI Code Translator</Heading>
+            <Button colorScheme="blue" size="lg">
+              Translate
+            </Button>
           </VStack>
           <Spacer />
         </Flex>
