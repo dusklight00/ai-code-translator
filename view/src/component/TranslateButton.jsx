@@ -10,11 +10,10 @@ async function translateCode(code, language) {
   return result.data.translated_code;
 }
 
-function TranslateButton({ initialCode, setTargetCode }) {
+function TranslateButton({ initialCode, targetLanguage, setTargetCode }) {
   const handleTranslateCode = async () => {
-    const translation = await translateCode(initialCode, "c");
+    const translation = await translateCode(initialCode, targetLanguage);
     setTargetCode(translation);
-    console.log(translation);
   };
 
   return (
