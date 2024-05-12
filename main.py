@@ -1,24 +1,9 @@
-# from translator import Translator
-
-# translator = Translator()
-
-# code = """
-# def wow():
-#     if(5 > 4):
-#         print("wow")
-# wow()
-# """
-
-# language = "php"
-
-# translated_code = translator.translate(code, language)
-
-# print(translated_code)
-
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from translator import Translator
 
 app = Flask(__name__)
+CORS(app)
 translator = Translator()
 
 @app.route("/translate", methods=["GET"])
